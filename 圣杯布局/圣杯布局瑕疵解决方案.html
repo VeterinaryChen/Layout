@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="left">left</div>
+		<div id="right">right</div>
+		<div id="center">center</div>
+		<!-- 左侧元素非浮动，右侧元素浮动，则两个元素无法并列一行，需要调整位置 -->
+	</body>
+</html>
+<style>
+	#left,#right{
+		width: 150px;
+	}
+	#left{
+		float: left;
+		background-color: #228B22;
+	}
+	#center{
+		background-color: #BDB76B;
+	}
+	#right{ 
+		float: right;
+		background-color: #FF0000;
+	}
+	#right,#left,#center{
+		height: 300px;
+	}
+</style>
+<!-- 
+	核心：实现中间主体部分中的左右定宽+中间自适应的布局效果
+ -->

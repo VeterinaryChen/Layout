@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+
+<body>
+	<div id="parent">
+		<div id="center">center</div>
+		<div id="left">left</div>
+		<div id="right">right</div>
+	</div>
+</body>
+
+</html>	
+<style>
+	#parent{
+		height: 300px;
+		/* margin-left对应left元素宽度 margin-right对应right元素 */
+		margin-left: 300px;
+		margin-right: 300px;
+	}
+	#left,   
+	#right {	
+		width: 300px;
+		
+	}
+
+	#left {
+		background-color: #228B22;
+		/* 将当前元素从当前行移动到上一行相同位置 */
+		margin-left: -100%;
+		position: relative;
+		/* 将当前元素移动到理想位置 */
+		left: -300px;
+	}
+
+	#center {
+		width: 100%;
+		background-color: #BDB76B;
+	}
+
+	#right {
+		background-color: #FF0000;
+		margin-left: -300px;
+		position: relative;
+		right: -300px;
+	}
+
+	#right,
+	#left,
+	#center {
+		height: 300px;
+		float: left;
+	}
+</style>
+<!-- 
+	核心：实现中间主体部分中的左右定宽+中间自适应的布局效果
+ -->
