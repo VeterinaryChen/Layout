@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>等分布局的第二种解决方案</title>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="column col1"><p>1</p></div>
+      <div class="column col2"><p>2</p></div>
+      <div class="column col3"><p>3</p></div>
+      <div class="column col4"><p>4</p></div>
+    </div>
+  </body>
+</html>
+<style>
+  .parent {
+    width: 100%;
+    display: table;
+    table-layout: fixed;
+  }
+  .column {
+    display: table-cell;
+    height: 300px;
+  }
+  .col1 {
+    background-color: aqua;
+  }
+  .col2 {
+    background-color: rgb(135, 199, 149);
+  }
+  .col3 {
+    background-color: rgb(196, 89, 181);
+  }
+  .col4 {
+    background-color: rgb(168, 129, 83);
+  }
+</style>
+<!-- 
+    display属性的值有关table实现，利用表格的td等分特性。
+ -->

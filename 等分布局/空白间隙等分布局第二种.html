@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>等分布局第一种解决方案</title>
+  </head>
+  <body>
+    <div id="parent-fix">
+      <div class="parent">
+        <div class="col1">
+          <div class="inner"></div>
+        </div>
+        <div class=" col2">
+          <div class="inner"></div>
+        </div>
+        <div class=" col3">
+          <div class="inner"></div>
+        </div>
+        <div class=" col4">
+          <div class="inner"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+<style>
+  .parent-fix {
+    overflow: hidden;
+  }
+  .parent {
+    display: table;
+    height: 200px;
+    margin-left: -10px;
+    /* 父级容器的宽度 + margin-left的宽度 */
+    width: 1530px;
+  }
+  .col1,
+  .col2,
+  .col3,
+  .col4 {
+    height: 200px;
+    display: table-cell;
+    padding-left: 10px;
+    box-sizing: border-box;
+  }
+  .inner {
+    height: 200px;
+    background-color: blue;
+  }
+</style>
+

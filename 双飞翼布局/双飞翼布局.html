@@ -7,7 +7,9 @@
 
   <body>
     <div id="parent">
-      <div id="center">center</div>
+      <div id="center">
+        <div id="inner"></div>
+      </div>
       <div id="left">left</div>
       <div id="right">right</div>
     </div>
@@ -16,8 +18,13 @@
 <style>
   #parent {
     height: 300px;
-    /* margin-left对应left元素宽度 margin-right对应right元素 */
+  }
+  #inner {
+    height: 300px;
+    background-color: blue;
+    /* 对应left元素宽度 */
     margin-left: 300px;
+    /* 对应right元素宽度 */
     margin-right: 300px;
   }
   #left,
@@ -29,9 +36,6 @@
     background-color: #228b22;
     /* 将当前元素从当前行移动到上一行相同位置 */
     margin-left: -100%;
-    position: relative;
-    /* 将当前元素移动到理想位置 */
-    left: -300px;
   }
 
   #center {
@@ -42,8 +46,6 @@
   #right {
     background-color: #ff0000;
     margin-left: -300px;
-    position: relative;
-    right: -300px;
   }
 
   #right,
@@ -54,5 +56,7 @@
   }
 </style>
 <!-- 
-	核心：实现中间主体部分中的左右定宽+中间自适应的布局效果
+    淘宝团队针对圣杯布局的优化方案，解决圣杯布局中开启定位的问题。
+
+
  -->

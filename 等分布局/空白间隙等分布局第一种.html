@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>等分布局第一种解决方案</title>
+  </head>
+  <body>
+    <div id="parent-fix">
+      <div class="parent">
+        <div class="column col1">
+          <div class="inner"></div>
+        </div>
+        <div class="column col2">
+          <div class="inner"></div>
+        </div>
+        <div class="column col3">
+          <div class="inner"></div>
+        </div>
+        <div class="column col4">
+          <div class="inner"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+<style>
+  .parent-fix{
+    overflow: hidden;
+  }
+  .parent {
+    height: 200px;
+    margin-left: -10px;
+  }
+  .column {
+    height: 200px;
+    float: left;
+    width: 25%;
+    padding-left: 10px;
+    box-sizing: border-box;
+  }
+  .inner {
+    height: 200px;
+    background-color: blue;
+  }
+</style>
+<!-- 
+    float属性实现等分布局
+ -->
