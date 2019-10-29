@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>absolute+transform</title>
+	</head>
+	<body>
+		<div class="father">
+			<div class="child">
+				水平居中布局
+			</div>
+		</div>
+	</body>
+</html>
+<style>
+	.father{
+		position: relative;
+		background-color: darkkhaki;
+	}
+	.child{
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		background-color: darkgray;
+	}
+</style>
+<!-- 
+	当前元素设置为绝对定位后：
+	1.如果父级元素没有设置定位，当前元素相对于页面定位。
+	2.如果父级元素设置了定位，当前元素相对于父级元素定位。
+	
+	优点：
+	1.父级元素是否脱离文档流，不影响子级元素水平居中效果。
+	缺点：
+	1.transform属性为css3中的新增属性，存在兼容性问题。
+ -->

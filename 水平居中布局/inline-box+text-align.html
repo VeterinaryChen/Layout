@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>inline-box+text-align</title>
+	</head>
+	<body>
+		<div class="father">
+			<div class="child">
+				水平居中布局
+			</div>
+		</div>
+	</body>
+</html>
+<style>
+	.father{
+		text-align:center;
+		background-color: darkkhaki;
+	}
+	.child{
+		display: inline-block;
+		background-color: darkgray;
+	}
+</style>
+<!-- 
+	较为简单的水平布局
+	1.text-align：为文本设置水平位置，只对 inline与inline-block有效。
+	2.display：inline-block表示行内块级元素，具备inline与block的特点。
+	
+	优点：
+	1.浏览器兼容性好
+	缺点：
+	1.text-align属性具有继承性，导致子级元素的文本也是居中显示的。可以设置子级元素重新设置text-align
+	
+ -->

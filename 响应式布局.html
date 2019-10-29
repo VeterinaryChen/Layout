@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,inital-scale=1.0">
+		<title></title>
+	</head>
+	<style>
+		.container{
+			margin: 0 auto;
+			max-width: 800px;
+			display: flex;
+			border: 1px solid black;
+		}
+		.left{
+			display: flex;
+			width:200px;
+			background: red;
+			margin: 5px;
+			flex: 1;
+		}
+		/* (640 , +∞ )时会生效 */
+	/* 	@media (min-width:640px) {`
+			.left{
+				display: none;
+			}
+		} */
+		/* (0,640)时会生效 */
+		@media (max-width:640px) {
+			.left{
+				display: none;
+			}
+		}
+		.right{
+			display: flex;
+			flex: 1;
+			background: blue;
+			margin: 5px;
+		}
+	</style>
+	<body>
+		<div class="containter">
+			<div class="left">
+				这里是一些不重要的内容
+			</div>	
+			<div class="right">
+				这里是一些重要的内容
+			</div>
+		</div>
+	</body>
+</html>

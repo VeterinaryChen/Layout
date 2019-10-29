@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<style>
+		.container{
+			background: red;
+			width: 400px;;
+		}
+		.p1{
+			background: green;
+			float: left;
+			width: 200px;
+			height: 50px;
+		}
+	</style>
+	<body>
+		<!-- 元素浮动，脱离文档流，但不脱离文本流 -->
+		<div class="container">
+			<!-- 
+			float 元素会形成"块"(BFC)，有自己的宽高
+			位置尽量靠上
+			位置尽量靠左(右)
+			不影响其他块级元素位置
+			影响其他块级元素内部文本
+			 -->
+			<span class="p1"> 
+				float 
+			</span>
+			<span class="p2">
+				很长的文字很长的文字很长的文字很长的文字很长的文字很长的文字很长的文字很长的文字很长的文字很长的文字很长的文字很长的文字
+			</span>
+		</div>
+	</body>
+</html>

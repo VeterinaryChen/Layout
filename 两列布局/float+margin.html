@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+			<div class="left">左</div>
+			<div class="right">右</div>
+	</body>
+	<style>
+		.left{
+			float: left;
+			width: 40px;
+			height: 100px;
+			background-color: #A9A9A9;
+		}
+		.right{
+			margin-left:40px ;
+			height: 100px;
+			background-color: #FFFF00;
+		}
+	</style>
+	<!-- 
+		左侧定宽，右侧自适应
+		float：脱离文档流
+		
+		优点：
+		1.实现方式简单。
+		缺点：
+		1.自适应元素margin-left需要与定宽元素的width保持一致。
+		2.定宽元素浮动，自适应元素不浮动，存在浏览器兼容问题。
+	 -->
+</html>

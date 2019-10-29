@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<div class="father">
+			<div class="child">
+				水平居中布局
+			</div>
+		</div>
+	</body>
+</html>
+<style>
+	.father{
+		display:table-cell;
+		vertical-align: middle;
+		background-color: #A9A9A9;
+		width: 150px;
+		height: 150px;
+	}
+	.child{
+		background-color: #BDB76B;
+		width: 70px;
+		height: 70px;
+	}
+</style>
+<!-- 
+	vertical-align用来设置文本内容的垂直对齐方式
+	table-cell设置当前元素为<td>。
+	table设置当前元素为<table>。
+	
+	优点：
+	1.浏览器兼容性较好。
+	缺点：
+	vertival-align具有继承性，导致子级元素文本垂直对齐。
+ -->

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>table+margin</title>
+	</head>
+	<body>
+		<div class="father">
+			<div class="child">
+				水平居中布局
+			</div>
+		</div>
+	</body>
+</html>
+<style>
+	.father{
+		background-color: darkkhaki;
+	}
+	.child{
+		display: table;
+		margin: 0 auto;
+		background-color: darkgray;
+	}
+</style>
+<!-- 
+	优点：
+	1.只需要对子级元素设置。
+	缺点：
+	1.如果如果子级元素脱离文档流（元素属性设置为float、absolute、fixed），导致margin属性的值无效。
+ -->

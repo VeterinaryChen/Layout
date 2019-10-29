@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+			<div class="left">左</div>
+			<div class="right">右</div>
+	</body>
+</html>
+<style>
+	.left{
+		width: 100px;
+		float: left;
+		background-color: #BDB76B;
+	}
+	.right{
+		/* 开启BFC模式 - 当前元素的内部环境与外部隔离 */
+		overflow: hidden;
+		background-color: #FFFF00
+	}
+</style>
+<!-- 
+	优点：
+	1.简单易用，无太多问题。
+	缺点：
+	1.overflow开启BFC，而且设置为内容溢出隐藏。
+	2.一个开启浮动，一个不开启浮动，存在浏览器兼容。
+ -->

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			.container{
+				width:800px;
+				height: 200px;
+				display: flex;
+				border: 1px solid black;
+			}
+			.left{
+				background: red;
+				margin: 5px;
+				flex:1;
+			}
+			.right{
+				background: yellow;
+				margin:5px;
+				flex:2;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- 弹性盒子，并列，指定宽度即可 -->
+		<!-- 低版本IE完全不支持，版本变动3次，需要做兼容 -->
+		<div class="container">
+			<div class="left">
+				左
+			</div>
+			<div class="right">
+				右
+			</div>
+		</div>
+	</body>
+</html>

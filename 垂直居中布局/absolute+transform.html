@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<div class="father">
+			<div class="child">
+				水平居中布局
+			</div>
+		</div>
+	</body>
+</html>
+<style>
+	.father{
+		position: relative;
+		background-color: #A9A9A9;
+		width: 150px;
+		height: 150px;
+	}
+	.child{
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		background-color: #FFFF00;
+		width: 70px;
+		height: 70px;
+	}
+</style>
+<!-- 
+	优点：
+	1.父级元素是否脱离文档流，不影响子级元素水平居中效果。
+	缺点：
+	1.transform属性为css3中的新增属性，存在兼容性问题。
+ -->
